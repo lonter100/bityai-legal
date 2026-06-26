@@ -56,7 +56,11 @@
         });
       };
     } else {
-      msg.textContent = "No authorization code in this URL. Start OAuth from the BityAi server.";
+      msg.innerHTML = 'This page receives the authorization code <strong>after</strong> you approve access in TikTok.<br><br>'
+        + '<strong>Do not open this URL directly.</strong><br><br>'
+        + '1. On the BityAi server run: <code>./run.sh --tiktok-auth</code><br>'
+        + '2. Open the long TikTok URL printed in the terminal.<br>'
+        + '3. Log in and click Authorize — you will return here with a code.';
     }
   </script>
 </body>
